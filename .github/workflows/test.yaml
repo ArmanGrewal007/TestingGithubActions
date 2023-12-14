@@ -25,6 +25,8 @@ jobs:
 
       - name: Commit changes
         run: |
+          git config --global user.email "armansinghgrewal@gmail.com"
+          git config --global user.name "ArmanGrewal007"
           git commit -am "Apply Ruff formatting" --allow-empty
 
       - name: Push changes
