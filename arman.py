@@ -1,8 +1,10 @@
+import os
 
 
 class Test:
     def __init__(self):
         self.__num = 100
+        print("this is a veryyyyyyyyyyyyy longggggggggggggg lineeeeeeeeeeeeeeeeeee")
 
     def setNum(self, newNum):
         self.__num = newNum
@@ -10,7 +12,8 @@ class Test:
     def getNum(self):
         return self.__num
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     t = Test()
     print(t.getNum())
     t.setNum(50)

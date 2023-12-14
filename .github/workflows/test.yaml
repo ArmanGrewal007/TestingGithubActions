@@ -1,4 +1,4 @@
-name: Black Formatter
+name: Ruff Formatter
 
 on:
   push:
@@ -21,15 +21,13 @@ jobs:
         run: pip install ruff
 
       - name: Run Ruff formatter
-        run: ruff .
+        run: ruff format *.py
 
-      # - name: Commit changes
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     git commit -am "Apply Black formatting" --allow-empty
+      - name: Commit changes
+        run: |
+          git commit -am "Apply Ruff formatting" --allow-empty
 
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
