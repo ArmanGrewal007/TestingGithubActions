@@ -18,18 +18,18 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install black
+        run: pip install ruff
 
       - name: Run Black formatter
-        run: black .
+        run: ruff .
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -am "Apply Black formatting" --allow-empty
+      # - name: Commit changes
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git commit -am "Apply Black formatting" --allow-empty
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
