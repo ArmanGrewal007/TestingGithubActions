@@ -34,6 +34,6 @@ jobs:
           echo "List files: $(ls -al)"
       - name: Push changes
         # uses: ad-m/github-push-action@master
-        uses: mikael/publish-to-github-action@master
+        uses: mikeal/publish-to-github-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
