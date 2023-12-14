@@ -33,6 +33,7 @@ jobs:
           echo "Current directory: $(pwd)"
           echo "List files: $(ls -al)"
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        # uses: ad-m/github-push-action@master
+        uses: mikael/publish-to-github-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
