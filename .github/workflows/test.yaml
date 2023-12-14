@@ -28,7 +28,10 @@ jobs:
           git config --global user.email "armansinghgrewal@gmail.com"
           git config --global user.name "ArmanGrewal007"
           git commit -am "Apply Ruff formatting" --allow-empty
-
+      - name: Debugging Output
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "List files: $(ls -al)"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
