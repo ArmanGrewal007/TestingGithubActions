@@ -2,9 +2,14 @@ import os
 
 
 class Test:
+
     def __init__(self):
         self.__num = 100
-        print("this is a veryyyyyyyyyyyyy longggggggggggggg lineeeeeeeeeeeeeeeeeee")
+        
+
+        print("this is a veryyyyyyyyyyyyy longggggggggggggg \
+              lineeeeeeeeeeeeeeeeeee"
+        )
 
     def setNum(self, newNum):
         self.__num = newNum
