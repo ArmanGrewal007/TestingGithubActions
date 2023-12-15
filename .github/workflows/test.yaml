@@ -1,12 +1,16 @@
 name: Ruff Formatter
 
 on:
+  workflow_dispatch:
   push:
   pull_request:
 
 jobs:
   format:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -34,6 +38,7 @@ jobs:
           echo "List files: $(ls -al)"
       - name: Push changes
         # uses: ad-m/github-push-action@master
-        uses: mikeal/publish-to-github-action@master
+        # uses: mikeal/publish-to-github-action@master
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
