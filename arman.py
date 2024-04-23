@@ -6,15 +6,18 @@ class Test:
         self.__num = 100
 
         print(
-            "this is a veryyyyyyyyyyyyy longggggggggggggg \
-              lineeeeeeeeeeeeeeeeeee"
+            "this is a veryyyyyyyyyyyyyyyyyyyyyyyyyyy longgggggggggggggggggggg lineeeeeeeeeeeeeeeeeeeeeeeeeeee"
         )
 
     def setNum(self, newNum):
         self.__num = newNum
 
     def getNum(self):
-        return self.__num
+        try:
+            return self.__num
+        except:
+            pass
+
 
 
 if __name__ == "__main__":
