@@ -1,6 +1,3 @@
-import os
-
-
 class Test:
     def __init__(self):
         self.__num = 100
@@ -15,7 +12,7 @@ class Test:
     def getNum(self):
         try:
             return self.__num
-        except:
+        except Exception:
             pass
 
 
