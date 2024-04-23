@@ -1,10 +1,10 @@
+import os 
+
 class Test:
     def __init__(self):
         self.__num = 100
 
-        print(
-            "this is a veryyyyyyyyyyyyyyyyyyyyyyyyyyy longgggggggggggggggggggg lineeeeeeeeeeeeeeeeeeeeeeeeeeee"
-        )
+        print("this is a veryyyyyyyyyyyyyyyyyyyyyyyyyyy longgggggggggggggggggggg lineeeeeeeeeeeeeeeeeeeeeeeeeeee")
 
     def setNum(self, newNum):
         self.__num = newNum
