@@ -19,7 +19,6 @@ class Test:
             pass
 
 
-
 if __name__ == "__main__":
     t = Test()
     print(t.getNum())
